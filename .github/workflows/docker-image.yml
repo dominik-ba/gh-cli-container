@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build ./docker/ --file ./docker/Dockerfile --tag :$(date +%s)
+      run: docker build ./docker/ --file ./docker/Dockerfile --tag gh-cli:$(date +%s)
 
     - name: Build and publish Docker Image to GitHub Packages Registry
       # You may pin to the exact commit or the version.
