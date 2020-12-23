@@ -1,4 +1,4 @@
-FROM alpine:2020.12.18
+FROM alpine:3.12.3
 
 ENV LANG=C.UTF-8
 
