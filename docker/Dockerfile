@@ -60,6 +60,7 @@ RUN true \
     && useradd -u $CUSTOM_UID -d "/home" -g $CUSTOM_GID custom_user \
     && chown -vR $CUSTOM_UID:$CUSTOM_GID /home \
     && true
+RUN mkdir /home/work
 RUN chmod 777 /home/work
 USER custom_user
 
