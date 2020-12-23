@@ -1,3 +1,5 @@
+![Docker Image CI](https://github.com/dominik-ba/gh-cli-container/workflows/Docker%20Image%20CI/badge.svg)
+
 # gh-cli-container
 Dockerfile for GitHub CLI
 
