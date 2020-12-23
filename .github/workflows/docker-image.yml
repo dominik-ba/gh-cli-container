@@ -1,0 +1,28 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build ./docker/ --file ./docker/Dockerfile --tag :$(date +%s)
+
+    - name: Build and publish Docker Image to GitHub Packages Registry
+      # You may pin to the exact commit or the version.
+      # uses: VaultVulp/gp-docker-action@abd86dfdcd23929f6195a0fd455769a73b7276da
+      uses: VaultVulp/gp-docker-action@1.1.7
+      with:
+        # GitHub token to push Docker image to GitHub Packages
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        # Docker Image name
+        image-name: gh-cli
