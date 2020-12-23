@@ -3,12 +3,12 @@ name: Docker Image CI
 on:
   push:
     branches: [ main ]
-    paths:
-    - "!README.md"
+    paths-ignore:
+    - "README.md"
   pull_request:
     branches: [ main ]
-    paths:
-    - "!README.md"
+    paths-ignore:
+    - "README.md"
 
 jobs:
 
