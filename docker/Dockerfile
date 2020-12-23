@@ -8,7 +8,7 @@ ENV LANG=C.UTF-8
 #     && true
 
 # Necesserary build and run dependencies
-ENV BUILD_DEPS='tar gzip'
+ENV BUILD_DEPS='tar gzip curl'
 RUN true \
     && apk --no-cache add $BUILD_DEPS \
     && apk add --update -t deps \
