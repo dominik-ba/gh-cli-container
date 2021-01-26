@@ -12,14 +12,16 @@ on:
 
 jobs:
 
-  build:
+  build-and-publish:
 
     runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/') # Running this job only for tags
+
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build ./docker/ --file ./docker/Dockerfile --tag docker.pkg.github.com/dominik-ba/gh-cli-container/gh-cli:v1.5.0
+    # - name: Build the Docker image
+    #   run: docker build ./docker/ --file ./docker/Dockerfile --tag docker.pkg.github.com/dominik-ba/gh-cli-container/gh-cli:v1.5.0
 
     - name: Build and publish Docker Image to GitHub Packages Registry
       # You may pin to the exact commit or the version.
@@ -30,3 +32,4 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         # Docker Image name
         image-name: gh-cli
+        extract-git-tag: true # Provide flag to extract Docker image tag from git reference
