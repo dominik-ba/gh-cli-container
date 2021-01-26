@@ -27,8 +27,8 @@ RUN true \
     && true
 
 
-ENV GH_CLI_VERSION "1.4.0"
-ENV GH_CLI_CHECKSUM bea14d3f99da06ac4c1d162f80345fb5c094202130d799e1a5fab3e629edbaa6
+ENV GH_CLI_VERSION "1.5.0"
+ENV GH_CLI_CHECKSUM 6fe61b7364f91582fdb13c3ccc889e4b9bc81a75ed7b3aae56e6e1fb67b21315
 ENV GH_CLI_BASE_URL "https://github.com/cli/cli/releases/download"
 ENV GH_CLI_FILE_NAME "gh_${GH_CLI_VERSION}_linux_amd64.tar.gz"
 ENV GH_CLI_UNZIPPED_FILE_NAME "gh_${GH_CLI_VERSION}_linux_amd64"
