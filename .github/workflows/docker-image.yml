@@ -38,3 +38,4 @@ jobs:
         # Docker Image name
         image-name: gh-cli
         extract-git-tag: true # Provide flag to extract Docker image tag from git reference
+        build-context: ./docker
