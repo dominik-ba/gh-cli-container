@@ -26,7 +26,7 @@ RUN true \
     && chmod 777 /.config \
     && true
 
-
+ARG GH_CLI_VERSION_EXTERNAL
 ENV GH_CLI_VERSION "1.5.0"
 ENV GH_CLI_CHECKSUM 6fe61b7364f91582fdb13c3ccc889e4b9bc81a75ed7b3aae56e6e1fb67b21315
 ENV GH_CLI_BASE_URL "https://github.com/cli/cli/releases/download"
