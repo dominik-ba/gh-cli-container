@@ -33,4 +33,5 @@ jobs:
         # Docker Image name
         image-name: gh-cli
         image-tag: test
-        build-context: /docker
+        # build-context: /docker
+        dockerfile: docker/Dockerfile
