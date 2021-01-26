@@ -1,8 +1,13 @@
 name: Docker Image CI
 
 on:
+  create:
+    tags:
+      - "v*"
   push:
     # branches: [ main ]
+    tags:
+      - "v*"
     paths-ignore:
     - "README.md"
   pull_request:
