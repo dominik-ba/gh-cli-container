@@ -16,3 +16,7 @@ docker run -it \
     -e GH_REPO=git.company.com/org/repo \
     -v $PWD:/home/work/repo dom/gh-cli:test
 ```
+
+## more docs
+
+the full github cli documentation can be found [here](https://cli.github.com/manual/)
