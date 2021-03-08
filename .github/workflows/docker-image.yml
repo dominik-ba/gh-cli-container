@@ -1,19 +1,15 @@
 name: Docker Image CD
 
-on: push
-  # create:
-  #   tags:
-  #     - "v*"
-  # push:
-  #   # branches: [ main ]
-  #   tags:
-  #     - "v*"
-  #   paths-ignore:
-  #   - "README.md"
-  # pull_request:
-  #   # branches: [ main ]
-  #   paths-ignore:
-  #   - "README.md"
+on: 
+  create:
+    tags:
+      - "v*"
+  push:
+    # branches: [ main ]
+    tags:
+      - "v*"
+    paths-ignore:
+    - "README.md"
 
 jobs:
 
