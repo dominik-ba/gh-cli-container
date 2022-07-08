@@ -1,4 +1,4 @@
-FROM alpine:3.15.0
+FROM alpine:3.16.0
 
 ENV LANG=C.UTF-8
 
@@ -27,8 +27,8 @@ RUN true \
     && true
 
 ARG GH_CLI_VERSION_EXTERNAL
-ENV GH_CLI_VERSION "2.6.0"
-ENV GH_CLI_CHECKSUM 4ed92c712bfaa002c9421cee12cdf4cb0ae76fcd49d60cab5d316b8ce9c0314a
+ENV GH_CLI_VERSION "2.13.0"
+ENV GH_CLI_CHECKSUM 9e833e02428cd49e0af73bc7dc4cafa329fe3ecba1bfe92f0859bf5b11916401
 ENV GH_CLI_BASE_URL "https://github.com/cli/cli/releases/download"
 ENV GH_CLI_FILE_NAME "gh_${GH_CLI_VERSION}_linux_amd64.tar.gz"
 ENV GH_CLI_UNZIPPED_FILE_NAME "gh_${GH_CLI_VERSION}_linux_amd64"
